@@ -1,0 +1,1 @@
+You get this error because there is no file named README.txt in the current directory. Git is in the business of managing files that you create with other programs, usually a text editor or IDE. It does not create files directly. You need to use another tool to do so. Use your favorite text editor (I suggest Notepad++, Sublime Text 3, or Atom) and create a file with some text.
