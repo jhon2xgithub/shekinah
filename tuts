@@ -1,0 +1,69 @@
+// git clone https://github.com/jhon2xgithub/shekinah.git .
+  - clone the repo from github
+
+// viewing information about the remote repository
+  - git remote -v
+  - git branch -a > lists all branches on this repository not on remotely the locally as well
+    
+    
+  // commit changes  
+  - git diff ?
+    - use to show files that you edited
+    - git status
+    - git add -A
+    - git status
+    - git commit -m "edited f1 and f2.html" 
+    
+  // then push
+    - git pull origin master
+    - git push origin master
+      note :
+        origin : is the name of remote repository
+        master : branch we wanna push files change
+        
+  // create branch
+    - git branch developer-1
+    - git branch
+    - git checkout developer-1 : switch to this branch from master       
+    - edit file(s)
+    - git status
+    - git add -A
+    - git commit -m ""
+    - git push -u origin developer-1
+    - git branch -a : this see all of the branches
+    - git checkout master : back to master branch
+    - git pull origin master  
+    - git branch --merged
+    - git merge developer-1 : merged this to master
+    - git push origin master 
+    
+  // deleting branch
+    - git branch --merged
+      $ git branch --merged
+        a
+        developer-1
+      * master
+
+    - git branch -d developer-1 : deleted locally
+      -- before
+        $ git branch -a
+        a
+        developer-1 : branch still existing locally 
+      * master
+        remotes/origin/HEAD -> origin/master
+        remotes/origin/developer-1
+        remotes/origin/master
+
+    - git branch -a : to see lists of the branches
+      -- after
+        $ git branch -a
+        a
+                    : developer-1 branch is deleted
+        * master
+        remotes/origin/HEAD -> origin/master
+        remotes/origin/developer-1
+        remotes/origin/master
+
+    - git push origin --delete developer-1? 
+      -- will delete branch from the remote repository
+  
